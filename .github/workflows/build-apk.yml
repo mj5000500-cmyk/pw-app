@@ -29,6 +29,7 @@ jobs:
         ANDROID_HOME: /usr/local/lib/android/sdk
       run: |
         echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
+        echo "android.useAndroidX=true" >> gradle.properties
         gradle assembleDebug --no-daemon --stacktrace
 
     - name: Upload APK Artifact
